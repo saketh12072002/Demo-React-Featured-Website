@@ -1,6 +1,6 @@
 import "./App.css";
-import Dashboard from "./components/Dashboard";
-import Navbar from "./components/Navbar";
+import Dashboard from "./components/Dashboard/Dashboard";
+import Navbar from "./components/Navbar/Navbar";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchData } from "./actions/action";
 import { useEffect } from "react";
@@ -14,7 +14,7 @@ const App = () => {
   }, [dispatch]);
 
   return tickets ? (
-    <div>
+    <div className="main">
       <Navbar />
       <Dashboard />
     </div>
